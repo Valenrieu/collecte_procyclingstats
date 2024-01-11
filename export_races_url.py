@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/python3
 
 from url_formatter import UciCircuit, get_url, get_races_links
 from stage_race import RaceCancelledError, get_stages_links
