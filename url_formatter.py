@@ -8,7 +8,7 @@ BASE_URL = "https://www.procyclingstats.com"
 
 class UciCircuit: # Attributs statiques pour les differentes categories
     WORLD_TOUR = 1
-    WORL_CHAMPIONSHIPS = 2
+    WORLD_CHAMPIONSHIPS = 2
     MEN_JUNIOR = 15
     WOMEN_ELITE = 16
     WOMEN_JUNIOR = 17
@@ -29,7 +29,7 @@ def get_url(year=None, uci_circuit=None, classification=None):
     url = BASE_URL+"/races.php?"
     params = {"year":str(year), "circuit":str(uci_circuit),
               "class":classification, "filter":"Filter"}
-    # supprimer les None
+    # Supprimer les None
     params = dict((k, v) for k, v in params.items() if v is not None)
     return url+urlencode(params)
 
@@ -41,6 +41,6 @@ def get_races_links(url):
 
     for line in table.find_all("tr"):
         link = line.find("a")
-        links.append(link.get("href"))
+        links.append(BASE_URL+"/"+link.get("href"))
 
     return links
