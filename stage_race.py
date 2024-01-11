@@ -25,7 +25,7 @@ def get_stages_links(url):
             break
 
     for line in table.find_all("tr"):
-        if line.string=="Restday":
+        if line.find_all("td")[2].string=="Restday":
             continue
 
         count += 1
