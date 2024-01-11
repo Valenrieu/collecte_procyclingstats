@@ -1,3 +1,5 @@
+#!/bin/bash
+
 from url_formatter import UciCircuit, get_url, get_races_links
 from stage_race import RaceCancelledError, get_stages_links
 
@@ -10,7 +12,7 @@ CLASSIFICATION = {UciCircuit.WORLD_TOUR:["1.UWT", "2.UWT"],
                   UciCircuit.UCI_PRO_SERIES:["1.Pro", "2.Pro"]}
 
 YEAR = 2023
-FILE_PATH = "races_url.txt"
+FILE_PATH = "out/races_url.txt"
 
 open(FILE_PATH, "w").close() # Vider le fichier
 
@@ -63,3 +65,6 @@ def export_urls():
     export_stages_race()
     export_championships_races()
     export_one_day_races()
+
+if __name__=="__main__":
+    export_urls()
