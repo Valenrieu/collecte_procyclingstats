@@ -1,15 +1,20 @@
-#!/bin/python3
-
 from requests import get
 from bs4 import BeautifulSoup
 
-# Renvoie un tuple qui contient le nombre d'etapes et un tableau
-# de liens vers les etapes
+class RaceCancelledError(Exception):
+    def __init(self, message=""):
+        super().__init__(message)
+
+# Renvoie les liens des etapes d'une course a etapes
 
 def get_stages_links(url):
+    if url[-2::]!="gc":
+        raise RaceCancelledError()
+
     table = None
     count = 0
     links = []
+    url = url[:-2]
     req = get(url)
     page = BeautifulSoup(req.text, "html.parser")
     h3 = page.find_all("h3")
@@ -21,6 +26,6 @@ def get_stages_links(url):
 
     for line in table.find_all("tr"):
         count += 1
-        links.append(url+f"/stage-{str(count)}")
+        links.append(url+f"stage-{str(count)}")
 
-    return count, links
+    return links

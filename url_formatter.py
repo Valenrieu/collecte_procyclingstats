@@ -1,5 +1,3 @@
-#!/bin/python3
-
 from urllib.parse import urlencode
 from requests import get
 from bs4 import BeautifulSoup
