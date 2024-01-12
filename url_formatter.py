@@ -4,7 +4,11 @@ from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.procyclingstats.com"
 
-class UciCircuit: # Attributs statiques pour les differentes categories
+# Attributs statiques pour les differentes categories
+# Equivalent d'une enum Java, a utiliser pour la fonction get_url
+# via l'argument uci_ciruit.
+
+class UciCircuit:
     WORLD_TOUR = 1
     WORLD_CHAMPIONSHIPS = 2
     MEN_JUNIOR = 15
