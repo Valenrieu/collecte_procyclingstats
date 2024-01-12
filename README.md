@@ -1,4 +1,4 @@
-# Collecte de données sur [procyclingstats.com](https://www.procylingstats.com)
+# Collecte de données sur [procyclingstats.com](https://www.procyclingstats.com)
 
 ## Introduction
 
