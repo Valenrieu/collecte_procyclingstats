@@ -11,7 +11,15 @@ des 500 meilleurs coureurs au [classement UCI](https://fr.wikipedia.org/wiki/Cla
 sur le résultat des courses les plus importantes, à savoir
 les courses World Tour, les courses Pro Tour, les championnats
 nationaux et mondiaux, et les courses du calendrier Europ Tour
-les plus importantes (catégorie 1). Se référer à [ce guide](https://fr.wikipedia.org/wiki/Circuits_continentaux_de_cyclisme) Pour comprendre les classifications des circuits continentaux.
+les plus importantes (catégorie 1). Se référer à [ce guide](https://fr.wikipedia.org/wiki/Circuits_continentaux_de_cyclisme) pour comprendre les classifications des circuits continentaux. Les
+indicateurs de classement sont les points UCI ou les points PCS,
+à chaque course un nombre de points UCI est attribué aux premiers 
+coureurs en fonction du classement, du barême et en fonction de la 
+durée (courses d'un jour (classiques), courses d'une semaine et 
+grand tours (Tour de France, Tour d'Italie et Tour d'Espagne qui 
+durent 3 semaines)) et du prestige de la course. Les points PCS 
+sont des points non officiels attribués par procyclingstats.com qui 
+ont un barême différent de celui de l'UCI.
 
 ## Prérequis
 
@@ -19,7 +27,7 @@ Les dépendances du programme(pandas et bs4) sont disponibles dans
 le  fichier **requirements.txt**. Pour les installer avec pip, 
 exécutez la commande :
 
-```bash
+```sh
 pip install -r requirements.txt
 ```
 
@@ -47,13 +55,13 @@ les fichiers un par un en respectant l'ordre, **export_races_url.py**,
 
 Pour lancer le script, rendez les fichiers exécutables :
 
-```bash
+```sh
 chmod +x run.py clean_dataframe.py export_riders_data.py export_races_url.py export_races_data.py
 ```
 
 Vous pouvez ensuite lancer le script avec la commande :
 
-```bash
+```sh
 ./run.py
 ```
 
