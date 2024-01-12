@@ -28,6 +28,16 @@ def get_stages_links(url):
         if line.find_all("td")[2].string=="Restday":
             continue
 
+        if "Prologue" in line.find_all("td")[2].string:
+            text = line.find("a").get("href")
+            if "tour-de-romandie" in text:
+                links.append(url+f"stage-0")
+            
+            else:
+                links.append(url+"prologue")
+            
+            continue
+
         count += 1
         links.append(url+f"stage-{str(count)}")
 
