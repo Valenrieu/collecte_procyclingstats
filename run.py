@@ -3,7 +3,7 @@
 import export_riders_data
 from export_races_url import export_urls
 from export_races_data import main
-from clean_dataframe.py import clean_races_file
+from clean_dataframe import clean_races_file
 
 if __name__=="__main__":
     export_urls()
