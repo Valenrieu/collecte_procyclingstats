@@ -2,7 +2,7 @@ from requests import get
 from bs4 import BeautifulSoup
 
 class RaceCancelledError(Exception):
-    def __init(self, message=""):
+    def __init__(self, message=""):
         super().__init__(message)
 
 # Renvoie les liens des etapes d'une course a etapes
