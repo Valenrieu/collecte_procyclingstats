@@ -91,6 +91,7 @@ def main():
     df1 = pd.DataFrame(top10, columns=col2)
     res = pd.concat([df, df1], axis=1)
     res.to_csv("out/courses2023.csv", encoding="utf-8", index=False)
+    print()
 
 if __name__=="__main__":
     main()
